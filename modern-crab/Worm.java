@@ -14,5 +14,16 @@ public class Worm extends Actor
      */
     public void act()
     {
+        movingWorm();
+    }
+
+    /**
+     * 
+     */
+    public void movingWorm()
+    {
+        if (Greenfoot.getRandomNumber(10) == 1) {
+            move(Greenfoot.getRandomNumber(90) - 45);
+        }
     }
 }

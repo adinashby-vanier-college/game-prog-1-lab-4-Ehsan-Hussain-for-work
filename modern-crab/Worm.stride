@@ -13,7 +13,21 @@
             <javadoc xml:space="preserve">Act - do whatever the Worm wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
             <params/>
             <throws/>
-            <body/>
+            <body>
+                <call expression="movingWorm()" expression-java="movingWorm()" enable="true"/>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="movingWorm" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <if condition="Greenfoot.getRandomNumber(10)==1" condition-java="Greenfoot.getRandomNumber(10) == 1" enable="true">
+                    <ifStatements>
+                        <call expression="move(Greenfoot.getRandomNumber(90)-45)" expression-java="move(Greenfoot.getRandomNumber(90) - 45)" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
         </method>
     </methods>
 </class>

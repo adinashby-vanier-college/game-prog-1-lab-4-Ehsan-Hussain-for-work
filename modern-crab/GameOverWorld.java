@@ -6,17 +6,16 @@ import greenfoot.*;
 /**
  * 
  */
-public class GameWonWorld extends World
+public class GameOverWorld extends World
 {
 
     /**
      * Constructor for objects of class GameWonWorld.
      */
-    public GameWonWorld()
+    public GameOverWorld()
     {
         super(560, 560, 1);
-        showTextWithBigBlackFont("You win", 180, 200);
-        Greenfoot.playSound("game-bonus-144751.mp3");
+        showTextWithBigBlackFont("Game Over", 180, 200);
     }
 
     /**
@@ -27,7 +26,7 @@ public class GameWonWorld extends World
         GreenfootImage bg = getBackground();
         Font font =  new  Font(50);
         bg.setFont(font);
-        bg.setColor(Color.BLACK);
+        bg.setColor(Color.RED);
         bg.drawString(message, x, y);
     }
 }
